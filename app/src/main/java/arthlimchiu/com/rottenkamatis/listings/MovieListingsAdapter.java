@@ -38,7 +38,10 @@ public class MovieListingsAdapter extends RecyclerView.Adapter<MovieListingsAdap
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(movies.get(position).getTitle());
-        Picasso.with(context).load("https://image.tmdb.org/t/p/w500" + movies.get(position).getPosterPath()).into(holder.poster);
+        Picasso.with(context)
+                .load("https://image.tmdb.org/t/p/w500" + movies.get(position).getPosterPath())
+                .placeholder(android.R.drawable.btn_star)
+                .into(holder.poster);
     }
 
     @Override
