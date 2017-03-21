@@ -2,7 +2,7 @@ package arthlimchiu.com.rottenkamatis.listings;
 
 import java.util.List;
 
-import arthlimchiu.com.rottenkamatis.Movie;
+import arthlimchiu.com.rottenkamatis.data.Movie;
 
 /**
  * Created by arthlimchiu on 23/02/2017.
@@ -10,4 +10,6 @@ import arthlimchiu.com.rottenkamatis.Movie;
 public interface MovieListingsView {
 
     void showMovies(List<Movie> movies);
+
+    void showEmptyError();
 }
